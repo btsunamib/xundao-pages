@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#174f43">
+  <meta name="description" content="单机修仙网页版：砍树出装，修炼渡劫，携灵兽探索大千世界。自动存档，可离线游玩。">
+  <title>寻道大千 · 单机修仙</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./art.js"></script>
+  <script defer src="./engine.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <div id="sprite-sheet" aria-hidden="true"></div>
+  <div class="game-shell">
+    <aside class="sidebar">
+      <div class="seal">道</div>
+      <div class="side-brand">寻道<br>大千</div>
+      <span class="side-caption">一斧在手 · 问道长生</span>
+      <nav id="desktop-nav" aria-label="主要玩法"></nav>
+      <div class="side-bottom"><span class="status-dot"></span>单机修仙<span class="edition">网页版 · v1.0</span></div>
+    </aside>
+    <main class="main-shell">
+      <header class="topbar">
+        <button id="profile-button" class="profile" aria-label="修改道号"><span id="profile-avatar" class="avatar"></span><span><strong id="player-name">无名小妖</strong><small id="realm-name">炼气初期</small></span><span class="profile-chevron">⌄</span></button>
+        <div id="resources" class="resources" aria-label="修仙资源"></div>
+        <button class="icon-button" data-action="settings" aria-label="打开设置和存档管理" title="设置和存档管理"><span data-icon="settings"></span></button>
+      </header>
+      <div class="page-heading"><div><span class="eyebrow">大千世界 · 自在修行</span><h1 id="page-title">仙山有灵，一斧问道</h1></div><button class="small-button" data-action="help"><span data-icon="scroll"></span>修仙指南</button></div>
+      <div id="page-content"></div>
+      <footer class="footer"><span>云深不知处，山中自有仙。</span><span id="save-status" role="status">本地存档已就绪</span></footer>
+    </main>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="主要玩法"></nav>
+  <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="false"></div>
+  <dialog id="main-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><div><span id="dialog-eyebrow" class="eyebrow">大千机缘</span><h2 id="dialog-title"></h2></div><button class="icon-button" data-action="close-dialog" aria-label="关闭弹窗">✕</button></div><div id="dialog-content"></div></dialog>
+  <input id="import-file" type="file" accept="application/json,.json" hidden>
+  <script>if ('serviceWorker' in navigator && location.protocol !== 'file:') window.addEventListener('load', function () { navigator.serviceWorker.register('./sw.js').catch(function () {}); });</script>
+</body>
+</html>
