@@ -1,5 +1,7 @@
 # 寻道大千 · 单机修仙网页版
 
+[直接游玩网页版](https://btsunamib.github.io/xundao-pages/)
+
 一个直接运行在浏览器中的单机修仙游戏。使用独立绘制的 SVG 场景、人物和灵兽，以及独立设计的养成数值；适合 GitHub Pages 静态托管。
 
 ## 可以玩什么

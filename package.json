@@ -1,6 +1,6 @@
 {
   "name": "xundao-single-player-pages",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "A browser-only cultivation game, ready for GitHub Pages",
   "scripts": {"test": "node --test tests/engine.test.cjs", "serve": "python3 -m http.server 5173", "package": "python3 tools/package.py"}
